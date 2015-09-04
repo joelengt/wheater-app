@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BEM</title>
+	<meta charset="UTF-8"/>
+	<link rel="stylesheet" type="text/css" href="BEM.css">
+	<link href='http://fonts.googleapis.com/css?family=Megrim' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<header class="main-header">
+	<h1>PlatziWeather</h1>
+	<h2>An Awesome way to see how we burn by global warming</h2>
+</header>
+<form action="" class="search">
+	<input data-input="cityAdd" type="text" class="search_text" placeholder="Agregar Nueva Ciudad"/>
+	<input data-button="add" type="submit" class="search_btn btn" value="Añadir una nueva ciudad"/>
+	<button data-save-cities class="search__btn btn"/>Ver Ciudades Guardadas</button>
+</form>
+<div class="loader">Geolocalizando tu posición, por favor espere...</div>
+
+	<main class="cards-group">
+	<template id="template--city">
+		<div class="card card--valencia">
+			<header class="card__header">
+				<h3 data-city class="card__title">Valencia</h3>
+				<h4 data-time class="card__date">07:39 am</h4>
+			</header>
+			<div class="card__info">
+				<img data-icon src="02d.png" alt="image-weatherclima"
+				class="card__image">
+				<span data-temp="max" class="card__maxt">15</span>
+				<span data-temp="min" class="card__mint">11</span>
+				<span data-temp="current" class="card__temp">13</span>
+			</div>
+		</div>
+	</template>
+
+		<!-- <div class="card card--mv">
+			<header class="card__header">
+				<h3 class="card__title">Montain View</h3>
+				<h4 class="card__date">07:39 am</h4>
+			</header>
+			<div class="card__info">
+				<img src="02d.png" alt="image-weatherclima"
+				class="card__image">
+				<span class="card__maxt">15</span>
+				<span class="card__mint">11</span>
+				<span class="card__temp">13</span>
+			</div>
+		</div> -->
+	</main>
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="probando.js"></script>
+</body>
+</html>
